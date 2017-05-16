@@ -18,6 +18,7 @@ disp(size(A,1));
 [L,U,P]=lu(A);
 % P*A = L*U
 % A*x=b
+% P*A*x=P*b
 % L*U*x=P*b
 % SISTEMA:  U*x=y
 %           L*y=P*b
