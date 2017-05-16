@@ -8,7 +8,7 @@ b = [2.46; 11.55; 31.1];
 n = size(b,1);
 disp(['dimensione: ', num2str(n)]);
 
-if any(any(L - tril(L))) == 0
+if (any(any(L - tril(L))) == 0) && (size(L,1) == size(L,2)) && (size(L,1) == size(b,1))
     disp('matrice diagonale inferiore');
     
     [xv, flag] = triinf(L, b);
