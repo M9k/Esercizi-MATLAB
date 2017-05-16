@@ -1,6 +1,5 @@
 function [xv, flag] = triinf(L, b)
-%TRIINF Determina la soluzione di un sistema triangolare
-% inferiore
+%TRIINF Determina la soluzione di un sistema triangolare inferiore
 %
 % Uso:
 % xv = triinf(L, b)

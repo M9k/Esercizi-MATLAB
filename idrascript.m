@@ -33,3 +33,8 @@ disp(x);
 pMat = A\b;
 disp('Soluzione secondo matlab:');
 disp(pMat);
+
+disp('Errore secondo la mia soluzione');
+disp(norm(A*x-b));
+disp('Errore secondo la soluzione matlab');
+disp(norm(A*pMat-b));

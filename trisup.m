@@ -1,6 +1,5 @@
 function [xv, flag] = trisup(U, b)
-%TRISUP Determina la soluzione di un sistema triangolare
-% superiore
+%TRISUP Determina la soluzione di un sistema triangolare superiore
 %
 % Uso:
 % xv = trisup(U, b)
