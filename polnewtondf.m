@@ -29,14 +29,30 @@ else
 %         d=d*h*i;
 %     end 
     
-    % DIFFERENZE DIVISE IN AVANTI
-    differenze = y;
-    delta = [];
-    for i=1:n
-        delta = [delta differenze(1)];
-        differenze = diff(differenze);
-    end
-    c = delta./(factorial((1:n)-1).*h.^((1:n)-1));
-    
+    % DIFFERENZE DIVISE IN AVANTI CON I VETTORI
+%    differenze = y;
+%    delta = [];
+%    for i=1:n
+%        delta = [delta differenze(1)];
+%        differenze = diff(differenze);
+%    end
+%    c = delta./(factorial((1:n)-1).*h.^((1:n)-1));
+
+    % DIFFERENZE DIVISE IN AVANTI SALVANDO LA MATRICE
+    n=length(x);
+    c=zeros(n);
+    % prima colonna
+	for i = 1:n
+        c(i,1) = y(i);
+	end
+        % colonne successive
+	for j = 2:n
+        for i = 1:n - j+1
+            c(i,j) = (c(i+1,j-1) - c(i,j-1))/(x(i+j-1) - x(i));
+        end
+	end
+    %disp(c);
+    c = c(1:1,:);
+    %disp(c);
 end
 
