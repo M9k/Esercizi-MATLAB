@@ -12,7 +12,7 @@ fprintf(file,'│ iterata:  │       valore:        │  intervallo:  │ diffe
 fprintf(file,'├───────────┼──────────────────────┼───────────────┼─────────────────────────────┤\n');
 
 while (diff > toll || cont<2)
-    [int, h] = simpson(@(x) sin(x.^2), 0, pi/4, sudd*2^cont);
+    [int, h] = simpson(@(x) sin(x.^2), 0, pi/4, sudd*2^(cont-1));
     diff = abs(int-prec);
     %disp(['passaggio numero: ', num2str(cont), ' valore:', num2str(int,'%.20f'), ' intervallo:', num2str(h), ' differenza dal precendete ' num2str(diff)]);
 
