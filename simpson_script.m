@@ -9,7 +9,7 @@ risultati = [];
 errori = [];
 
 while (diff > toll || cont<2)
-    [int, h] = simpson(@(x) sin(x), 0, pi/4, sudd*2^cont);
+    [int, h] = simpson(@(x) sin(x.^2), 0, pi/4, sudd*2^cont);
     diff = abs(int-prec);
     %disp(['passaggio numero: ', num2str(cont), ' valore:', num2str(int,'%.20f'), ' intervallo:', num2str(h), ' differenza dal precendete ' num2str(diff)]);
 
@@ -23,7 +23,7 @@ while (diff > toll || cont<2)
 end
 fclose(file);
 
-sol = quadl(@(x) sin(x), 0, pi/4, 1e-8);
+sol = quadl(@(x) sin(x.^2), 0, pi/4, 1e-8);
 figure(1);
 clf;
 hold on;
