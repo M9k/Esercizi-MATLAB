@@ -1,0 +1,18 @@
+Matrice A:
+[2 4 6;2 7 0;-3 -4 -12]
+Vettore B:
+[12;9;19]
+Termine noto:
+2
+Matrice L:
+[2 0 0;2 3 0;-3 2 1]
+Matrice U:
+[1 2 3;0 1 -2;0 0 1]
+Matrice LxU:
+[2 4 6;2 7 0;-3 -4 -12]
+Soluzione:
+[-265;77;39]
+Soluzione fornita da matlab:
+[-265;77;39]
+Norma della differenza dei due vettori:
+1.780615e-013
