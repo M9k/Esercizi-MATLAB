@@ -1,0 +1,31 @@
+
+ Metodo di Richardson per la risoluzione del sistema lineare Ax=b
+
+ test arresto toll*norm(b) = 1.97929e-009 
+ Numero massimo iterate nmax = 100 
+ alfa = 0.3 
+
+Norme dei residui
+k 	 || r_k ||
+
+0	 7.1556e+001
+1	 1.9793e+001
+2	 1.7032e+000
+3	 1.7590e-001
+4	 2.8759e-002
+5	 6.7578e-003
+6	 1.7899e-003
+7	 4.9528e-004
+8	 1.4049e-004
+9	 4.0537e-005
+10	 1.1846e-005
+11	 3.4965e-006
+12	 1.0402e-006
+13	 3.1148e-007
+14	 9.3779e-008
+15	 2.8365e-008
+16	 8.6133e-009
+17	 2.6245e-009
+18	 8.0213e-010
+
+ Numero di iterate n = 19 
