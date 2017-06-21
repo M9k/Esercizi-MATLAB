@@ -1,0 +1,71 @@
+Comandi utili per l'esame:
+FONDAMENTALE! File->Preferences->Keyboard->Shortcuts->System default set, NON emacs! emacs è il male! Vim è migliore! :qa!
+
+clear all						o semplicemente clear, da usare SEMPRE quando si inizia uno script, pericoloso tralasciarlo
+
+disp							utilizzato soprattutto per il debug
+uso:
+	disp(valore)
+	disp(['stringa'])
+	disp(['stringa', num2str(123), 'stringa2'])
+
+num2str							da numero a stringa, per la stampa
+mat2str							da matrice a stringa, per la stampa
+
+f = fopen('file.txt','w+')		apre un file in modalità scrittura
+fclose(f)						chiude il file, da usare prima di terminare lo script
+
+figure(1)						seleziona la finestra dove disegnare, utile per fare più grafici in contemporanea
+semilogy						come plot ma in scala logaritmica per le y, NON USARE HOLD ON!
+hold on							non cancella il grafico al successivo plot
+hold off						annulla hold on
+clf								pulisce il grafico
+title							titolo al grafo
+xlabel							etichetta per l'asse delle x
+ylabel							etichetta per l'asse delle y
+text(x,y,'testo')				testo in coordinate x, y, si può inserirlo una volta aperto il grafico con il menu inserisci
+
+fprintf(file, testo, variabili...)
+	se il file è omesso stampa su schermo (facile da stampare su schermo e su file copiando una riga e modificandola leggermente)
+
+	nel testo si può usare:
+	\t	tabulazione
+	\n	a capo
+	%d	stampa una variabile intera
+	%f	stampa una variabile in formato floating point
+	%e	stampa una variabile in formato esponenziale
+	%123.45f o e -> usa 123 caratteri per il numero, dei quali 45 dopo la virgola
+
+	utili:
+	%d - visto sopra, per gli indici
+	%.16f - in formato floating point con 16 numeri dopo il punto di radice, ottimo per i risultati
+	%.10e - in formato esponenziale con 10 numeri dopo il punto di radice, ottimo per i residui
+	
+	ATTENZIONE! c'è un errore sull'uso dello stack, se si inseriscono variabili non utilizzate NON verranno pulite prima dell'esecuzione del fprintf successivo,
+				questo porta a fare "slittare" le variabili
+
+abs								valore assoluto
+mod								modulo, il % non si può usare perchè serve per commentare
+norm							norma di vettore, usare help norm se servono norme specifiche
+vettore'						trasposta di vettore
+[v, valore]						aggiunge il valore dopo di v
+[v; valore]						aggiunge il valore sotto v
+matrice(x,y)					deferenziazione, NON USARE LE PARENTESI QUADRE!
+pi								pi greco
+exp(1)							e, numero di nepero
+exp(a)							e^a
+
+
+Da riguardare: i for che utilizzano un array per scorrere, la struttura if elseif else
+
+In caso di necessità:
+per gli arrotondamenti help floor, round, ceil o fix
+
+Se richiede di trovare graficamente una radice:
+figure(1); 			% opzionale
+clf;
+hold on;
+i = 0:0.1:1;		% intervallo, modificarlo finchè non si è soddisfatti del risultato
+plot(i, i.*0, 'r'); % asse delle x
+plot(i, f(i), 'k'); % dove f è la funzione
+hold off;
